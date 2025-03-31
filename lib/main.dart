@@ -21,7 +21,18 @@ class MyWidget extends StatelessWidget {
               height: 100, // Fix: Höhe setzen für Kreisform
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.blue,
+                color: Color(0xFF32BDE6),
+                gradient: LinearGradient(
+                  colors: [Colors.green, Colors.lightGreen],
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    blurRadius: 10,
+                    spreadRadius: 2,
+                    offset: Offset(4, 4),
+                  ),
+                ],
               ),
               alignment: Alignment.center, // Fix: Text in der Mitte ausrichten
               margin: EdgeInsets.all(25.0),
@@ -34,11 +45,39 @@ class MyWidget extends StatelessWidget {
                 ),
               ),
             ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              spacing: 16,
-              children: [Text("Test1"), Text("Test2"), Text("Test3")],
+              children: [
+                Text(
+                  "Test1",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+                SizedBox(width: 16),
+                Text(
+                  "Test2",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(width: 16),
+                Text(
+                  "Test3",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ],
             ),
+
             Spacer(), // Lässt die bisherigen Inhalte oben stehen
             Column(
               children: [
