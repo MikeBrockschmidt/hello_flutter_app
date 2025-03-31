@@ -17,8 +17,8 @@ class MyWidget extends StatelessWidget {
           children: [
             Divider(),
             Container(
-              width: 100, // Fix: Breite setzen für Kreisform
-              height: 100, // Fix: Höhe setzen für Kreisform
+              width: 100,
+              height: 100,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Color(0xFF32BDE6),
@@ -27,14 +27,14 @@ class MyWidget extends StatelessWidget {
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
+                    color: Colors.grey,
                     blurRadius: 10,
                     spreadRadius: 2,
                     offset: Offset(4, 4),
                   ),
                 ],
               ),
-              alignment: Alignment.center, // Fix: Text in der Mitte ausrichten
+              alignment: Alignment.center,
               margin: EdgeInsets.all(25.0),
               child: Text(
                 'famka',
@@ -78,14 +78,27 @@ class MyWidget extends StatelessWidget {
               ],
             ),
 
-            Spacer(), // Lässt die bisherigen Inhalte oben stehen
+            Spacer(),
             Column(
               children: [
                 Container(height: 90, color: Color(0xFFFF63C8)),
                 Container(height: 90, color: Color(0xFF4779C8)),
                 Container(height: 90, color: Color(0xFFFF4647)),
                 Container(height: 90, color: Color(0xFF32BDE6)),
-                Container(height: 90, color: Color(0xFF2C6464)),
+                Container(
+                  height: 90,
+                  color: Color(0xFF2C6464),
+                  child: Center(
+                    child: Text(
+                      "Test4",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                  ),
+                ),
                 Container(height: 90, color: Color(0xFFFFD301)),
               ],
             ),
